@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Telemedicine</title>
+    <link rel="stylesheet" href="/css/patientProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="profileNav">
+        <a href="/patients/dashboard"><i class="fas fa-chevron-circle-left"></i></a>
+    </div>
+    <section>
+        <div class="form-container">
+            <div class="form-heading">
+                <span class="headline">Profile Management</span>
+            </div>
+
+            <form id="profileForm" method="post">
+                <label for="firstName" class="label">First Name</label>
+                <input type="text" id="firstName" placeholder="John" value="<%= patientData.first_name %>" required>
+                <span class="error" id="fNameError"></span><br />
+
+                <label for="lastName" class="label lname-label">Last Name</label>
+                <input type="text" id="lastName" placeholder="Doe" value="<%= patientData.last_name %>" required>
+                <span class="error" id="lNameError"></span><br />
+
+                <!-- BEGIN Non-Editable Fields -->
+                <label for="email" class="label email-label">Email</label>
+                <input type="email" placeholder="john.doe@example.com" value="<%= patientData.email %>" readonly>
+
+                <label for="password" class="label pwd-label">Password</label>
+                <input type="password" value="********" readonly>
+                <!-- END Non-Editable Fields -->
+
+                <label for="phone" class="label phone-label">Phone</label>
+                <input type="tel" id="phone" placeholder="+1 (123) 456-7890" value="<%= patientData.phone %>" required>
+                <span class="error" id="phoneError"></span><br />
+
+                <label for="dob" class="label dob-label">Date of Birth</label>
+                <input type="date" id="dob" value="<%= new Date(patientData.dob).toISOString().split('T')[0] %>"
+                    required>
+                <span class="error" id="dobError"></span>
+
+                <label for="gender" class="label gender-label">Gender</label>
+                <input type="text" id="gender" placeholder="Male, Female, Other"
+                    value="<%= patientData.gender.toUpperCase() %>" required>
+                <span class="error" id="genderError"></span>
+
+                <label for="address" class="label address-label">Address</label>
+                <input type="text" id="address" placeholder="123 Main St, Springfield, IL 62701"
+                    value="<%= patientData.address %>" required>
+                <span class="error" id="addressError"></span>
+
+                <button type="submit" class="update-btn">Update Profile</button>
+                <button onclick="confirmDelete()" type="button" class="delete-btn">Delete Account</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="/js/patientProfile.js"></script>
+</body>
+
+</html>

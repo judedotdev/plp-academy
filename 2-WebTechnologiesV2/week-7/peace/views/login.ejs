@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Telemedicine</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <section>
+        <a href="/" class="logo">
+            <img src="/img/logo-footer-light.png" alt="logo-footer-light" class="logo-light" />
+        </a>
+        <div class="form-box">
+            <div class="form-heading">
+                <span class="headline">Login to your account</span>
+                <span class="sub-headline">Securely login to your Telemedicine</span>
+            </div>
+
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="showPatientForm()">Patient</button>
+                <button type="button" class="toggle-btn" onclick="showAdminForm()">Admin</button>
+            </div>
+
+            <div class="form-container">
+                <form id="patient" class="input-group">
+                    <label for="email" class="email-label">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                    <span class="error" id="emailError"></span><br />
+
+                    <label for="patientPwd" class="pwd-label">Password</label>
+                    <input type="password" id="patientPwd" minlength="8" placeholder="Enter your password" required>
+                    <span class="error" id="patientPwdError"></span><br />
+
+                    <button type="submit" class="login-btn">Log In</button>
+                    <span class="loginMessage" id="patientLoginMsg"></span>
+                </form>
+
+                <form id="admin" class="input-group">
+                    <label for="username" class="username-label">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                    <span class="error" id="usernameError"></span><br />
+
+                    <label for="adminPwd" class="pwd-label">Password</label>
+                    <input type="password" id="adminPwd" minlength="8" placeholder="Enter your password" required>
+                    <span class="error" id="adminPwdError"></span><br />
+
+                    <button type="submit" class="login-btn">Log In</button>
+                    <span class="loginMessage" id="adminLoginMsg"></span>
+                </form>
+            </div>
+
+            <a href="/auth/register" class="dont-have">Don&apos;t have an account? Register</a>
+            <a class="forgot-pwd">Forgot Password</a>
+        </div>
+    </section>
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

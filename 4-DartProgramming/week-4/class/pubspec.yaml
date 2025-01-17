@@ -1,0 +1,8 @@
+name: week_four_class
+description: >-
+  Utilities in Dart Programming language
+version: 1.0.0
+environment:
+  sdk: ^3.0.0
+dependencies:
+  intl: ^0.18.0 # Or the latest version

@@ -1,0 +1,38 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "clock",
+      "rootUri": "file:///C:/Users/jude/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/jude/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.18.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "meta",
+      "rootUri": "file:///C:/Users/jude/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.16.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///C:/Users/jude/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "week_four_class",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    }
+  ],
+  "generated": "2024-11-06T19:45:11.238033Z",
+  "generator": "pub",
+  "generatorVersion": "3.2.5"
+}

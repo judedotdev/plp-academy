@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Telemedicine</title>
+    <link rel="stylesheet" href="/css/adminProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="profileNav">
+        <a href="/admin/dashboard"><i class="fas fa-chevron-circle-left"></i></a>
+    </div>
+    <section>
+        <div class="form-container">
+            <div class="form-heading">
+                <span class="headline">Profile Management</span>
+            </div>
+
+            <form id="profileForm" method="post">
+                <label for="username" class="label">Username</label>
+                <input type="text" id="username" placeholder="John" value="<%= adminData.username %>" required>
+                <span class="error" id="usernameError"></span><br />
+
+                <!-- BEGIN Non-Editable Fields -->
+                <label for="password" class="label pwd-label">Password</label>
+                <input type="password" value="********" readonly>
+                <!-- END Non-Editable Fields -->
+
+                <label for="role" class="label role-label">Role</label>
+                <input type="text" id="role" placeholder="admin" value="<%= adminData.role %>" required>
+                <span class="error" id="roleError"></span>
+
+                <button type="submit" class="update-btn">Update Profile</button>
+                <button onclick="confirmDelete()" type="button" class="delete-btn">Delete Account</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="/js/adminProfile.js"></script>
+</body>
+
+</html>

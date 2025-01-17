@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Telemedicine</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img src="/img/logo-dark.png" width="346" height="72" alt="logo-dark" class="logo" />
+        </a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a>Doctors</a></li>
+                <li><a>Services</a></li>
+                <li><a>Contact</a></li>
+                <li><a href="/auth/login" class="loginBtn">Login</a></li>
+                <li><a href="/auth/register" class="registerBtn">Register</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </nav>
+    </header>
+
+    <aside id="sidebar" class="sidebar" style="display: none;">
+        <div class="sidebar-row">
+            <a href="/">
+                <img src="/img/logo-dark.png" width="346" height="72" alt="logo-dark" class="logo" />
+            </a>
+            <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        </div>
+        <div class="sidebar-links">
+            <a href="/">Home</a>
+            <a>Doctors</a>
+            <a>Services</a>
+            <a>Contact</a>
+            <a href="/auth/login" class="loginBtn">Login</a>
+            <a href="/auth/register" class="registerBtn">Register</a>
+        </div>
+        <form class="search">
+            <input type="search" placeholder="Keyword...">
+            <button type="submit">Search</button>
+        </form>
+        <div class="sidebar-col">
+            <span class="sidebar-info">For more information about our services or to schedule an appointment, please
+                don&apos;t hesitate to contact us.</span>
+            <div class="info-section">
+                <i class="clock-icon">&#128339;</i>
+                <div class="info-col">
+                    <a class="info-bold">Mon - Fri: 9:00AM - 10:00PM</a>
+                    <span class="info-normal">Sat - Sun: Closed</span>
+                </div>
+            </div>
+            <div class="info-section">
+                <i class="clock-icon">&#9742;</i>
+                <div class="info-col">
+                    <a href="tel:+12318005678990" class="info-bold">+ (123) 1800-567-8990</a>
+                    <span class="info-normal">+ (123) 1800-567-8990</span>
+                </div>
+            </div>
+            <div class="info-section">
+                <i class="clock-icon">&#9993;</i>
+                <div class="info-col">
+                    <a href="mailto:telemedicine@example.com" class="info-bold">telemedicine@example.com</a>
+                    <span class="info-normal">clinic@example.com</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="hero">
+            <div class="headline">
+                <span class="intro-text-md">Healthcare at</span>
+                <span class="intro-text-bold">Your Fingertips</span>
+            </div>
+            <span class="sub-headline">
+                Experience the convinience of virtual medical consultations from the comfort
+                of your home. Our team of healthcare professionals is available online to
+                provide personalized care, advice and prescriptions whenever you need them.
+            </span>
+        </div>
+        <div class="gallery">
+            <span class="gallery-heading">Gallery of Our Clinic</span>
+            <span class="gallery-subheadline">
+                Take a virtual tour of our state-of-the art facilities and experience
+                the welcoming environment where we provide exceptional healthcare services.
+            </span>
+            <div class="gallery-images">
+                <div class="col-row-1">
+                    <img src="/img/h1-img-5.jpg" alt="" class="gallery-img" />
+                    <img src="/img/h1-img-6.jpg" alt="" class="gallery-img" />
+                    <img src="/img/h1-img-4.jpg" alt="" class="gallery-img" />
+                </div>
+                <div class="col-row-2">
+                    <img src="/img/h1-img-1.jpg" alt="" class="gallery-img" />
+                    <img src="/img/h1-img-2.jpg" alt="" class="gallery-img" />
+                    <img src="/img/h1-img-3.jpg" alt="" class="gallery-img" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-socials">
+                <img src="/img/logo-footer-light.png" width="346" height="72" alt="logo-footer-light"
+                    class="logo-footer" />
+                <span>
+                    We prioritize your health and well-being. Our team is dedicated to providing you
+                    with convinient access to quality healthcare from the comfort of your home.
+                </span>
+                <span> <i class="footer-icon fas fa-map-marker-alt"></i> Street, 11000 Helsinki, Finland</span>
+                <a href="tel:+123111234567"> <i class="footer-icon fas fa-phone"></i> (+123)11 123 4567</a>
+                <a href="mailto:telemedicine@example.com"> <i class="footer-icon fas fa-envelope"></i>
+                    telemedicine@example.com</a>
+                <div class="footer-social-links">
+                    <a href="#facebook"><i class="social-link-icon fab fa-facebook"></i></a>
+                    <a href="#twitter"><i class="social-link-icon fab fa-twitter"></i></a>
+                    <a href="#pinterest"><i class="social-link-icon fab fa-pinterest"></i></a>
+                    <a href="#linkedin"><i class="social-link-icon fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <span class="contact-us">Contact Us</span>
+                <form>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                    <button type="submit" class="message-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <span class="copyright">&copy; <span id="year"></span> Telemedicine, All Rights Reserved</span>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

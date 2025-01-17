@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Telemedicine</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <section>
+        <a href="/" class="logo">
+            <img src="/img/logo-footer-light.png" alt="logo-footer-light" class="logo-light" />
+        </a>
+        <div class="form-box">
+            <div class="form-heading">
+                <span class="headline">Create a Secure Account</span>
+                <span class="sub-headline">Healthcare at your fingertips</span>
+            </div>
+
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="showPatientForm()">Patient</button>
+                <button type="button" class="toggle-btn" onclick="showAdminForm()">Admin</button>
+            </div>
+
+            <div class="form-container">
+                <form id="patient" class="input-group">
+                    <label for="firstName" class="label">First Name</label>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <span class="error" id="fNameError"></span><br />
+
+                    <label for="lastName" class="label lname-label">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last Name (Surname)" required>
+                    <span class="error" id="lNameError"></span><br />
+
+                    <label for="email" class="label email-label">Email</label>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <span class="error" id="emailError"></span><br />
+
+                    <label for="password" class="label pwd-label">Password</label>
+                    <input type="password" id="password" minlength="8" placeholder="Password" required>
+                    <span class="error" id="passwordError"></span><br />
+
+                    <label for="confirmPassword" class="label pwd-label">Confirm Password</label>
+                    <input type="password" id="confirmPassword" minlength="8" placeholder="Confirm Password" required>
+                    <span class="error" id="confirmPasswordError"></span><br />
+
+                    <label for="phone" class="label phone-label">Phone</label>
+                    <input type="tel" id="phone" placeholder="+2348065096213" required>
+                    <span class="error" id="phoneError"></span><br />
+
+                    <label for="dob" class="label dob-label">Date of Birth</label>
+                    <input type="date" id="dob" required>
+                    <span class="error" id="dobError"></span>
+
+                    <label for="gender" class="label gender-label">Gender</label>
+                    <select id="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="address" class="label address-label">Address</label>
+                    <input type="text" id="address" placeholder="123 Main St, Springfield, IL 62701" required>
+                    <!-- <span class="error" id="addressError"></span> -->
+
+                    <button type="submit" class="register-btn">Register</button>
+                </form>
+
+                <form id="admin" class="input-group">
+                    <label for="username" class="label">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                    <span class="error" id="usernameError"></span>
+
+                    <label for="role" class="label role-label">Role</label>
+                    <select id="role" required>
+                        <option value="admin">admin</option>
+                        <option value="superadmin">superadmin</option>
+                    </select>
+
+                    <label for="adminPwd" class="label pwd-label">Password</label>
+                    <input type="password" id="adminPwd" minlength="8" placeholder="Enter your password" required>
+                    <span class="error" id="adminPwdError"></span>
+
+                    <button type="submit" class="register-btn">Register</button>
+                </form>
+            </div>
+
+            <a href="/auth/login" class="already-have">Already have an account? Log In</a>
+            <a class="terms">Terms and Conditions</a>
+        </div>
+    </section>
+
+    <script src="/js/register.js"></script>
+</body>
+
+</html>

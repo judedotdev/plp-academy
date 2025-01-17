@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./assets/css/register.css">
+</head>
+
+<body>
+    <div class="container">
+        <img width="200" src="./assets/img/logo.png" alt="MediClinic Logo" />
+        <form class="registrationForm" id="registrationForm" action="#" method="post">
+            <span class="headline">Create a Secure Account</span>
+            <span class="subHeadline">Welcome to the MediClinic</span>
+
+            <label for="fullName">Full Name</label><br>
+            <input class="formInput" type="text" name="fullName" id="fullName" placeholder="Full Name">
+            <span class="error" id="nameError"></span><br><br>
+
+            <label for="email">Email Address</label><br>
+            <input class="formInput" type="email" name="email" id="email" placeholder="Email Address">
+            <span class="error" id="emailError"></span><br><br>
+
+            <label for="password">Password</label><br>
+            <input class="formInput" type="password" name="password" id="password" placeholder="Password">
+            <span class="error" id="passwordError"></span><br><br>
+
+            <label for="confirmPassword">Confirm Password</label><br>
+            <input class="formInput" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+            <span class="error" id="confirmPasswordError"></span><br><br>
+
+            <label for="age">Age</label><br>
+            <input class="formInput" type="number" name="age" id="age" placeholder="Age">
+            <span class="error" id="ageError"></span><br><br>
+
+            <span class="gender">Gender</span><br>
+            <input type="radio" name="gender" required>Male
+            <input type="radio" name="gender" required>Female
+            <br><br>
+
+            <label for="country">Country</label><br>
+            <select class="formInput" name="country" id="country" required></select>
+            <br><br>
+
+            <input type="checkbox" name="terms" id="terms">
+            <label for="terms">Terms and Conditions</label><br>
+            <span class="error" id="termsError"></span><br><br>
+
+            <button class="registerButton" type="submit">CREATE ACCOUNT</button>
+        </form>
+    </div>
+
+    <script src="./assets/js/register.js"></script>
+</body>
+
+</html>

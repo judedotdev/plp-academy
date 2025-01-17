@@ -1,0 +1,56 @@
+DART FLUTTER SESSION 1
+Monday, October 28, 2024
+8:00 AM - 10:00 AM
+Click here to register/join the session
+Oct 28, 2024 10:00 AM Nairobi https://powerlearnproject-org.zoom.us/webinar/register/WN_d5iU-e9cT-mqzCZ_6xa0gg
+Repo: https://github.com/Lenkaa3792/AUGUST-COHORT
+
+DART FLUTTER SESSION 2
+Monday, October 28, 2024
+12:00 PM - 2:00 PM
+Click here to register/join the session
+2:00 PM Nairobi https://powerlearnproject-org.zoom.us/webinar/register/WN_1rWXTgBLSX6O8_PCIcuJzg
+Repo-1: https://github.com/Lenkaa3792/Dart-main-concepts
+Repo-2: https://github.com/Lenkaa3792/AUGUST-COHORT
+
+Question: how can I declare a constant Integer.
+Or constant double, etc
+Answer:
+const int myConstantInt = 42;
+const double myConstantDouble = 3.14;
+const String myConstantString = 'Hello';
+
+Code Dart Online: https://dartpad.dev/
+Intro to Dart: https://www.youtube.com/watch?v=OwQ__u9jHIs
+
+A great resource for finding emojis along with their Unicode values is Emojipedia. It provides a complete catalog of emojis, with details on each emoji’s:
+
+Unicode Code Point: Listed in a format like U+1F600
+Name and Description: Clear descriptions of the emoji's meaning and variations
+Compatibility: Information on how each emoji appears across different platforms
+Another option is the Unicode Consortium’s official emoji page, which lists emojis by category and Unicode version.
+
+
+DART FLUTTER SESSION 3
+6:30PM NAIROBI https://powerlearnproject-org.zoom.us/webinar/register/WN_Zd4kKEn2TU2sbmciRpaMzQ
+
+Start Time:
+Mon, Oct 28, 2024
+04:30 PM
+Duration:
+120 minutes
+
+We used DartPad: https://dartpad.dev/
+
+N/B: Use int when you need to ensure the variable is an integer and want type safety.
+Use var for inferred types and flexibility, especially when the type is evident from context.
+
+**Class Recordings And Resources**
+1. Github Resource: https://github.com/Lenkaa3792/Dart-main-concepts
+
+Lesson 1: https://powerlearnproject-org.zoom.us/rec/share/AetgMPKetQPwxdCYf8R19BB6ixSeSyof36S4AFVEMPilfrtkQ9pGY_BSqiISOCaN.7TvwI3KTbtCrVAJZ
+Lesson 2: https://powerlearnproject-org.zoom.us/rec/share/GB9lAj1tHKfxJCcFwKKPe2sZSsaYCH9dgu_myxaqCB16SMvR2ZdK7H4HL5lj_lcO.N98e-3Yhuy1Oou0T
+Lesson 3: Compeleted in lesson 2
+
+what is the time for tomorrows class?
+10am EAT

@@ -1,0 +1,375 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    color: black;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .4), 0 1px 2px 0 rgba(0, 0, 0, .24);
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 16rem;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #062863;
+        color: white;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        transition: width 0.3s ease;
+        box-shadow: none;
+    }
+}
+
+/* Narrow sidebar style */
+.sidebar.collapsed {
+    width: 4.5rem;
+}
+
+/* Hide the element when sidebar is collapsed */
+.sidebar.collapsed .collapsedHidden {
+    display: none;
+}
+
+.firstRow {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.firstRow span {
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.firstRow .logo {
+    width: 144px;
+    height: 30px;
+    margin-left: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .firstRow {
+        display: flex;
+    }
+}
+
+.sidebarLinks {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    font-size: xx-small;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.sidebarLinks a {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #a0aec0;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .sidebarLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-top: 3rem;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        font-size: medium;
+    }
+
+    .sidebarLinks a {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.sidebarLinks a i {
+    font-size: 1.2rem;
+}
+
+.sidebarLinks a span {
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .sidebarLinks a span {
+        margin-left: 1.5rem;
+    }
+}
+
+.sidebarLinks .lastRow {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 5rem;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebarLinks .lastRow {
+        display: block;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0rem;
+    transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    main {
+        margin-left: 16rem;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+}
+
+header div h1 {
+    font-size: 1.5rem;
+    font-size: 1.875rem;
+    color: black;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    header {
+        padding-top: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    header div h1 {
+        font-size: 1.875rem;
+    }
+}
+
+header div p {
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+header a {
+    display: flex;
+    flex-direction: row;
+    width: 3rem;
+    height: 3rem;
+}
+
+header a i {
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    font-size: 3rem;
+    border-style: solid;
+    border: 2px solid #e2e8f0;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.main-content {
+    margin-top: 2rem;
+}
+
+.main-content section h3 {
+    margin-bottom: 1rem;
+}
+
+.doctorForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.doctorForm select,
+.doctorForm input,
+.doctorForm button,
+button {
+    height: 2rem;
+    padding: 2px 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.adding-form button {
+    background-color: rgb(121, 19, 229);
+    color: #fff;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0px solid;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.adding-form button:hover {
+    background-color: #062863;
+}
+
+.doctors {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.appointments {
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    align-items: center;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.selectDoctor {
+    margin-top: 1rem;
+}
+
+.form-group select,
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-close {
+    background-color: #dc3545;
+    margin-top: 15px;
+}
+
+.btn-close:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 600px) {
+    .modal {
+        max-width: 90%;
+    }
+}

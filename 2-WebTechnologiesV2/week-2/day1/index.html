@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Week 2: Day 1 - CSS</title>
+    <!-- Meta Tag for display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag for character set -->
+    <meta charset="UTF-8">
+    <!-- embeded/internal styling -->
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+    <!-- external styling -->
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Heading -->
+        <h1>My Simple Web Page</h1>
+    </header>
+
+    <!-- Paragraph -->
+    <p style="color: red;">
+        This is a basic HTML template created as part of an assignment
+        to understand web development fundamentals.
+    </p>
+    <p id="p-two">This is another example of a paragraph</p>
+
+    <!-- Registration Form -->
+    <h2>Registration Form</h2>
+    <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- User Information Table -->
+    <h2>User Information</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>(123) 456-7890</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>(098) 765-4321</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Image Section -->
+    <h2>Sample HTML Code Editor Image</h2>
+    <img width="400" height="400" src="./image.webp"
+        alt="HTML code editor displaying basic web development elements like title, header, form, and table">
+
+    <!-- External Link -->
+    <p>Visit <a href="https://google.com" target="_blank">Google</a> for more information.</p>
+</body>
+
+</html>

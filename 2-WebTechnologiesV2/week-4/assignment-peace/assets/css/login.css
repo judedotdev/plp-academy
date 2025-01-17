@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(../img/bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+img {
+    background-color: white;
+    opacity: 0.7;
+    padding: 10px;
+}
+
+.loginForm {
+    background-color: white;
+    width: 320px;
+    padding: 40px 20px;
+    margin: 40px 0px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+}
+
+@media (min-width: 768px) {
+    .loginForm {
+        width: 400px;
+    }
+}
+
+.headline, .subHeadline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.headline {
+    font-weight: 700;
+    font-size: 20px;
+    color: #083e9e;
+}
+
+.subHeadline {
+    color: #4A5568;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    color: #4A5568;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.formInput, .loginButton {
+    width: 95%;
+    height: 50px;
+    padding: 0 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #EDF2F7;
+    border: 1px solid #e2e8f0;
+}
+
+.formInput:focus {
+    outline: none;
+    border: 1px solid #e2e8f0;
+}
+
+.loginButton {
+    background-color: #0D60D8;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+}
+
+.loginButton:hover {
+    background-color: #083e9e;
+}

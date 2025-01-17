@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: U8, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: Karla, sans-serif;
+    color: #1a202c;
+    padding: 0.5rem;
+}
+
+a:hover {
+    color: rgb(60, 60, 60);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileNav {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+}
+
+.profileNav i {
+    font-size: x-large;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 3rem;
+    width: 320px;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+@media (min-width: 768px) {
+
+    .profileNav,
+    .form-container {
+        width: 640px;
+    }
+
+    .profileNav i {
+        font-size: xx-large;
+    }
+}
+
+.form-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.headline {
+    font-weight: 700;
+    color: #083e9e;
+    font-size: x-large;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #4A5568;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.lname-label,
+.email-label,
+.pwd-label,
+.phone-label,
+.dob-label {
+    margin-top: 1rem;
+}
+
+.gender-label,
+.role-label,
+.terms-label {
+    margin-top: 2rem;
+}
+
+input {
+    background-color: #EDF2F7;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    color: #1a202c;
+    border-radius: 0.5rem;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #e2e8f0;
+}
+
+.error {
+    font-size: small;
+    font-style: italic;
+}
+
+.update-btn {
+    background-color: #0D60D8;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    margin-top: 2rem;
+}
+
+.update-btn:hover {
+    background-color: #083e9e;
+}
+
+.delete-btn {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    margin-top: 1rem;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}

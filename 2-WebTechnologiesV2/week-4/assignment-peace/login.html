@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <img width="200" src="./assets/img/logo.png" alt="MediClinic Logo" />
+        <form class="loginForm" id="loginForm" action="#" method="post">
+            <span class="headline">Login to your account</span>
+            <span class="subHeadline">Securely login to your Account</span>
+
+            <label for="email">Email Address</label><br>
+            <input class="formInput" type="email" name="email" id="email" placeholder="Email Address">
+            <span class="error" id="emailError"></span><br><br>
+
+            <label for="password">Password</label><br>
+            <input class="formInput" type="password" name="password" id="password" placeholder="Password">
+            <span class="error" id="passwordError"></span><br><br>
+
+            <button class="loginButton" type="submit">LOG IN</button>
+        </form>
+    </div>
+
+    <script src="./assets/js/login.js"></script>
+</body>
+
+</html>

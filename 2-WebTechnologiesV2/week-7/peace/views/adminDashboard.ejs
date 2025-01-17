@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Telemedicine</title>
+    <link rel="stylesheet" href="/css/adminDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="firstRow" id="firstRow">
+                <span onclick="toggleSidebar()">&#9776;</span>
+                <a href="/"><img src="/img/logo-light.png" alt="logo-light" class="logo collapsedHidden" /></a>
+            </div>
+
+            <div class="sidebarLinks">
+                <a href="/admin/dashboard">
+                    <i class="fas fa-home"></i>
+                    <span class="collapsedHidden">Home</span>
+                </a>
+                <a href="/admin/dashboard#addDoctor">
+                    <i class="fas fa-user-md"></i>
+                    <span class="collapsedHidden">Add Doctor</span>
+                </a>
+                <a href="/admin/dashboard#doctors">
+                    <i class="fas fa-list"></i>
+                    <span class="collapsedHidden">List of Doctors</span>
+                </a>
+                <a href="/admin/dashboard#appointments">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="collapsedHidden">Upcoming Appointments</span>
+                </a>
+                <a href="/admin/doctors">
+                    <i class="fas fa-cog"></i>
+                    <span class="collapsedHidden">Doctor Management</span>
+                </a>
+                <a href="/admin/profile">
+                    <i class="fas fa-user"></i>
+                    <span class="collapsedHidden">Account</span>
+                </a>
+                <li class="lastRow">
+                    <a href="/admin/logout">
+                        <i class="fas fa-power-off"></i>
+                        <span class="collapsedHidden">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <div>
+                    <h1>Welcome, <%= adminData.username %>!</h1>
+                    <p>Healthcare at your fingertips</p>
+                </div>
+
+                <a href="/admin/profile"><i class="fas fa-user"></i></a>
+            </header>
+
+            <div class="main-content">
+                <!-- Add Doctor Form -->
+                <section class="adding-form" id="addDoctor">
+                    <h3>Add a Doctor</h3>
+                    <form id="doctorForm" class="doctorForm">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" placeholder="First Name" required />
+
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" placeholder="Last Name (Surname)" required />
+
+                        <label for="specialization">Specialization:</label>
+                        <input type="text" id="specialization" placeholder="e.g: Neurology" required />
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Email Address" required />
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" placeholder="+2348065096213" required />
+
+                        <label for="schedule">Schedule:</label>
+                        <input type="text" id="schedule" placeholder="e.g: Mon-Fri 9AM-5PM" required />
+
+                        <button type="submit" class="add-doctor-btn">Add Doctor</button>
+                    </form>
+                </section>
+
+                <!-- List of Doctors -->
+                <section class="doctors" id="doctors">
+                    <h3>List of Doctors</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Doctor's Name</th>
+                                <th>Specialization</th>
+                                <th>Schedule</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="doctorsList"></tbody>
+                    </table>
+                </section>
+
+                <!-- Upcoming Appointments Section -->
+                <section class="appointments" id="appointments">
+                    <h3>Upcoming Appointments</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Doctor's Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="upcomingAppointments"></tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/adminDashboard.js"></script>
+</body>
+
+</html>

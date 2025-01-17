@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - Telemedicine</title>
+    <link rel="stylesheet" href="/css/patientDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="firstRow" id="firstRow">
+                <span onclick="toggleSidebar()">&#9776;</span>
+                <a href="/"><img src="/img/logo-light.png" alt="logo-light" class="logo collapsedHidden" /></a>
+            </div>
+
+            <div class="sidebarLinks">
+                <a href="/patients/dashboard">
+                    <i class="fas fa-home"></i>
+                    <span class="collapsedHidden">Home</span>
+                </a>
+                <a href="/patients/dashboard#bookAppointment">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span class="collapsedHidden">Book Appointment</span>
+                </a>
+                <a href="/patients/dashboard#appointments">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="collapsedHidden">Upcoming Appointments</span>
+                </a>
+                <a href="/patients/dashboard#appointmentHistory">
+                    <i class="fas fa-history"></i>
+                    <span class="collapsedHidden">Appointment History</span>
+                </a>
+                <a href="/patients/profile">
+                    <i class="fas fa-user"></i>
+                    <span class="collapsedHidden">Account</span>
+                </a>
+                <li class="lastRow">
+                    <a href="/patients/logout">
+                        <i class="fas fa-power-off"></i>
+                        <span class="collapsedHidden">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <div>
+                    <h1>Welcome, <%= patientData.first_name %>!</h1>
+                    <p>Healthcare at your fingertips</p>
+                </div>
+
+                <a href="/patients/profile"><i class="fas fa-user"></i></a>
+            </header>
+
+            <div class="main-content">
+                <!-- Appointment Booking Form -->
+                <section class="booking-form" id="bookAppointment">
+                    <h3>Book an Appointment</h3>
+                    <form id="appointmentForm" class="appointmentForm">
+                        <label for="doctor">Select Doctor:</label>
+                        <select id="doctor" required></select>
+
+                        <label for="date">Select Date:</label>
+                        <input type="date" id="date" required />
+
+                        <label for="time">Select Time:</label>
+                        <input type="time" id="time" required />
+
+                        <button type="submit" class="appointment-btn">Book Appointment</button>
+                    </form>
+                </section>
+
+                <!-- Upcoming Appointments Section -->
+                <section class="appointments" id="appointments">
+                    <h3>Upcoming Appointments</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Doctor's Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="upcomingAppointments"></tbody>
+                    </table>
+                </section>
+
+                <section id="modalContainer" class="modal-container">
+                    <div class="modal">
+                        <h2>Reschedule Appointment</h2>
+                        <form id="rescheduleForm">
+                            <!-- Doctor Selection -->
+                            <div class="form-group">
+                                <label for="rescheduleDoctor" class="selectDoctor">Select Doctor:</label>
+                                <select id="rescheduleDoctor" required></select>
+                            </div>
+
+                            <!-- Date Selection -->
+                            <div class="form-group">
+                                <label for="rescheduleDate">Select Date:</label>
+                                <input type="date" id="rescheduleDate" required />
+                            </div>
+
+                            <!-- Time Selection -->
+                            <div class="form-group">
+                                <label for="rescheduleTime">Select Time:</label>
+                                <input type="time" id="rescheduleTime" required />
+                            </div>
+
+                            <!-- Close and Submit Buttons -->
+                            <button type="submit" class="btn">Submit</button>
+                            <button type="button" id="closeModalBtn" class="btn btn-close">Close</button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Appointment History Section -->
+                <section class="appointmentHistory" id="appointmentHistory">
+                    <h3>Appointment History</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Doctor's Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history"></tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/patientDashboard.js"></script>
+</body>
+
+</html>

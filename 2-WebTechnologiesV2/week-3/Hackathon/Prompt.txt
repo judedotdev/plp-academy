@@ -1,0 +1,17 @@
+I am participating in a Hackathon Challenge where I was told to Build an individual portfolio website.
+
+Here is the complete details below:
+
+```
+Build a dynamic, individual portfolio website showcasing: 
+
+Programming Languages: List the programming languages and frameworks you’re familiar with.
+About Section: Tell us who you are and what drives you.
+Educational Background: Include a section where visitors can download your CV.
+Interests: Highlight your passions and what excites you in tech.
+Projects: Link to the projects you’ve worked on.
+Contact Form: Make it easy for potential employers or collaborators to get in touch with you.
+Highlight your skills, projects, and passions.
+```
+
+Can I build this using only HTML and CSS?
